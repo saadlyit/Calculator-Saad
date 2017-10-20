@@ -1,12 +1,49 @@
-﻿<Window x:Class="Calculator_Saad.MainWindow"
+<Window x:Class="Calculator_Saad.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Saad"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="My calculator" Height="350" Width="525">
     <Grid>
         
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="btn7" Grid.Row="2" Grid.Column="0" Height="53" VerticalAlignment="Top" Click="btn7_Click">7</Button>
+        <Button Name="btn8" Grid.Row="2" Grid.Column="1" Click="btn8_Click">8</Button>
+        <Button Name="btn9" Grid.Row="2" Grid.Column="2" Click="btn9_Click">9</Button>
+        <Button Name="btn4" Grid.Row="3" Grid.Column="0" Click="btn4_Click">4</Button>
+        <Button Name="btn5" Grid.Row="3" Grid.Column="1" Click="btn5_Click">5</Button>
+        <Button Name="btn6" Grid.Row="3" Grid.Column="2" Click="btn6_Click">6</Button>
+        <Button Name="btn1" Grid.Row="4" Grid.Column="0" Click="btn1_Click">1</Button>
+        <Button Name="btn2" Grid.Row="4" Grid.Column="1" Click="btn2_Click">2</Button>
+        <Button Name="btn3" Grid.Row="4" Grid.Column="2" Click="btn3_Click">3</Button>
+        <Button Name="btn0" Grid.Row="6" Grid.Column="1">0</Button>
+        <!--Math operation-->
+        <Button x:Name="btnplus" Grid.Row="2" Grid.Column="3" Content="+" Click="btnplus_Click"/>
+        <Button Name="btnminus" Grid.Row="3" Grid.Column="3" Click="btnminus_Click">-</Button>
+        <Button Name="btnmultiply" Grid.Row="4" Grid.Column="3" Click="btnmultiply_Click">*</Button>
+        <Button Name="btndivide" Grid.Row="5" Grid.Column="3">/</Button>
+        <Button Name="btnequal" Grid.Row="5" Grid.Column="3" Click="btnequal_Click">=</Button>
+        <!--clear button-->
+        <Button x:Name="btnCE" Grid.Row="1" Grid.Column="0" Click="btnCE_Click" Content="CE`"/>
+        <Button Name="btnC" Grid.Row="1" Grid.Column="1" Click="btnC_Click">C</Button>
+        <Button Name="btnee" Grid.Row="1" Grid.Column="2">empty</Button>
+        <Button Grid.Row="1" Grid.Column="3">empty</Button>
+        <!--Display Text-->
+        <TextBox Name="btntext" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">Text</TextBox>
     </Grid>
 </Window>
